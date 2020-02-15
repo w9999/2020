@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+  //对栈内存
+   //堆内存：储存引用值
+   //当堆内存的空间地址不被占用的时候就销毁了
+  //  function fn() {
+  //           var n = 0;
+
+  //           function f() {
+  //               var b = 13;
+  //               n++;
+  //               console.log(n);
+  //           };
+  //           f();
+  //           return f;
+  //       };
+  //       var r = fn();
+  //       r();
+
+
+        // var i = 5;
+        // function fn(i) { //1 2 4
+        //     return function (n) { 
+        //         console.log(n + (++i)); 
+        //     }
+        // }
+        // var f = fn(1);
+        // f(2);//4
+        // fn(3)(4); //8
+        // fn(5)(6); //12
+        // f(7); //10
+        // console.log(i);//5
+
+
+        // var num = 1;
+        // var obj = {
+        //     num: 10,
+        //     fn: (function (num) { //30 40
+          
+        //         var num = 2;//3 4 5
+        //         return function (n) { 
+        //             console.log(n * (num++));
+        //         }
+        //     })(num)
+        // }
+        // var f = obj.fn; 
+        // console.log(f === obj.fn) //true
+        // f(10); //20
+        // f(20);//60
+        // obj.fn(30); //120
+        // obj.fn(40);//200
+
+
+
+
+        // var a = 9; //
+        // function fn() {
+        //     /* 
+        //      */
+        //     a = 0;//1
+        //     return function (b) { //5
+        //         return b + a++;
+        //     }
+        // }
+        // var f = fn(); // 
+        // var m = f(5); // 
+        // alert(m); // 5
+        // var n = fn()(5);
+        // alert(n); // 5
+        // var x = f(5);
+        // alert(x); // 6
+        // alert(a); // 2
+  </script>  
+</body>
+</html>

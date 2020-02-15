@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .box {
+            width: 600px;
+            margin: 10px auto;
+            border: 1px solid #eee;
+        }
+
+        .box .tad_box {
+            display: flex;
+            height: 51px;
+            align-items: center;
+            text-align: center;
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        .box .tad_box li {
+            flex: 1;
+            height: 100%;
+            cursor: pointer;
+            line-height: 50px;
+        }
+
+        .box .tad_box li.cuurrent {
+            background: #eee;
+            color: coral;
+        }
+
+        .box .body_box div {
+            height: 200px;
+            line-height: 200px;
+            font-size: 35px;
+            display: none;
+        }
+
+        .box .body_box div.current {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul class="tad_box">
+            <li class='current'>css</li>
+            <li>sss</li>
+            <li>aaa</li>
+        </ul>
+        <div class="body_box">
+            <div class='current'>csss</div>
+            <div>宿舍</div>
+            <div>啊啊</div>
+        </div>
+    </div>
+    <script>
+   let tabs = document.querySelectorAll('.tad_box li'),
+       bodys = document.querySelectorAll('body_box div');
+       for (let i=0;i<tabs.length;i++){
+           tabs[i].onclick =function(){
+               bodys[i].className ='current';
+               this.className ='current';
+           }
+       }
+
+    </script>
+</body>
+
+</html>

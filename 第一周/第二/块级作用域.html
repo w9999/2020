@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //块级作用域 指的是 if while for 等使用的{}包起来的部分let const 可以识别块级作用域
+    if(true){
+        var zf = 'zhufengpeixun';
+        let zf2 = 'zhufeng';
+    }
+    console.log(zf)
+    console.log(zf2)//报错
+    </script>
+</body>
+</html>

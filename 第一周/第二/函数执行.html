@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //先开劈一个私有作用域 形参赋值变量提升 代码从上到下执行
+    sum(20);
+    function sum(a){
+        //函数的存储过程  开辟一个堆内存，把函数体当做字符串存储到堆内存中 并把地址赋值给函数
+        var b= 100;
+        var c = a+b;//复制的操作，永远都是右边计算的结果赋值给左边
+        console.log(c)
+        return c
+    }
+    
+    </script>
+</body>
+</html>
